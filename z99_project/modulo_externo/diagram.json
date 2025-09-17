@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard",
+      "id": "bb1",
+      "top": 28.27,
+      "left": -856.43,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": -188.9,
+      "left": -302,
+      "rotate": 270,
+      "attrs": {}
+    },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": 71.2, "left": -986.58, "attrs": {} },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir2",
+      "top": 83.67,
+      "left": -130.21,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir3",
+      "top": 275.67,
+      "left": -552.61,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir4",
+      "top": -98.73,
+      "left": -581.41,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "bb1:bp.2", "bb1:tp.1", "red", [ "v20.1", "h77.6", "v163.2", "h-67.2", "v-9.6" ] ],
+    [ "bb1:bn.2", "bb1:tn.1", "black", [ "v-8.3", "h-8.8", "v48", "h76.8", "v134.4" ] ],
+    [ "pir3:GND", "bb1:tn.16", "black", [ "v9.6", "h86.14", "v-163.2" ] ],
+    [ "pir3:VCC", "bb1:tp.29", "red", [ "v19.2", "h-48", "v-9.6" ] ],
+    [ "pir1:GND", "bb1:tn.50", "black", [ "v0" ] ],
+    [ "pir1:VCC", "bb1:tp.50", "red", [ "v0" ] ],
+    [ "pir2:VCC", "bb1:tp.6", "red", [ "v76.8", "h-220.8" ] ],
+    [ "pir2:GND", "bb1:tp.8", "black", [ "v96", "h-0.26" ] ],
+    [ "pir4:VCC", "bb1:bp.27", "red", [ "v0" ] ],
+    [ "pir4:GND", "bb1:bn.25", "black", [ "v0" ] ],
+    [ "pir4:OUT", "bb1:24b.f", "gray", [ "v134.4", "h86.26" ] ],
+    [ "pir2:OUT", "bb1:21b.f", "green", [ "v86.4", "h-316.94", "v-134.4", "h-19.2" ] ],
+    [ "pir3:OUT", "bb1:22b.f", "gold", [ "v19.2", "h86.26" ] ],
+    [ "pir1:OUT", "bb1:23b.f", "orange", [ "v76.8", "h499.06" ] ],
+    [ "esp:VIN", "bb1:bp.1", "red", [ "v0" ] ],
+    [ "esp:GND.2", "bb1:bn.1", "black", [ "v0" ] ],
+    [ "esp:D34", "bb1:24b.j", "gray", [ "v9.6", "h-151.83" ] ],
+    [ "esp:D35", "bb1:23b.j", "orange", [ "v19.2", "h-152.03" ] ],
+    [ "esp:D32", "bb1:22b.j", "gold", [ "v28.8", "h-151.73" ] ],
+    [ "esp:D33", "bb1:21b.j", "green", [ "v38.4", "h-151.63" ] ]
+  ],
+  "dependencies": {}
+}

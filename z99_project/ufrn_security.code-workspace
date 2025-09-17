@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "Interno"
+			"path": "modulo_interno"
+		},
+		{
+			"name": "Externo",
+			"path": "modulo_externo"
+		},
+		{
+			"name": "Central",
+			"path": "central"
+		},
+    {
+			"name": "Raiz",
+			"path": "."
+    }
+	],
+	"settings": {}
+}
